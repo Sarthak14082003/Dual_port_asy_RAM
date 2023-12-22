@@ -1,10 +1,10 @@
 module assynchronous_ram(clk_rd,clk_wr,data_in,data_out,rd_en,wr_en,ram_add,rst
     );
 input clk_rd,clk_wr,wr_en,rd_en,rst;
-input [7:0]data_in;
-input [7:0]ram_add;
-output reg [7:0]data_out;
-reg [7:0]ram[0:127];
+input [2:0]data_in;
+input [2:0]ram_add;
+output reg [2:0]data_out;
+reg [2:0]ram[0:7];
 reg [7:0]i;
 
 always@(posedge clk_wr)
